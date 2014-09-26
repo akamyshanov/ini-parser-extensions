@@ -14,6 +14,7 @@
 *\_UpgradeReport_Files
 *\Backup
 *\.nuget
+nuget-csproj.bat
 UpgradeLog.XML
 UpgradeLog.htm
 *.lic
