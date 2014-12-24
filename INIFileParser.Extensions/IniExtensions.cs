@@ -31,7 +31,7 @@ namespace IniParser.Extensions
                     {
                         throw new ParsingException("required field fetch error: " + propertyAttribute.Name, ex);
                     }
-                    else if (propertyAttribute.DefaultValue != null)
+                    else if (propertyAttribute.DefaultValue != null && typeof(object) != propertyAttribute.DefaultValue.GetType())
                     {
                         property.SetValue(obj, propertyAttribute.DefaultValue);
                     }
