@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INIFileParser.Extensions", "INIFileParser.Extensions\INIFileParser.Extensions.csproj", "{6EB52135-8E33-4670-85EA-B492E43B442C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INIFileParser.Extensions.Test", "INIFileParser.Extensions.Test\INIFileParser.Extensions.Test.csproj", "{8110192E-134F-43CA-88DB-BD708FD8F918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6EB52135-8E33-4670-85EA-B492E43B442C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EB52135-8E33-4670-85EA-B492E43B442C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EB52135-8E33-4670-85EA-B492E43B442C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8110192E-134F-43CA-88DB-BD708FD8F918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8110192E-134F-43CA-88DB-BD708FD8F918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8110192E-134F-43CA-88DB-BD708FD8F918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8110192E-134F-43CA-88DB-BD708FD8F918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
