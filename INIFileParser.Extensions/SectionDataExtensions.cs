@@ -18,11 +18,12 @@ namespace IniParser.Extensions
         public static T CreateObject<T>(this SectionData section)
             where T : class, new()
         {
+            section = new SectionData(section, StringComparer.OrdinalIgnoreCase);
             var obj = section.Keys.CreateObject<T>();
             var keyProperty = typeof(T).GetKeyProperty();
             if (keyProperty != null)
             {
-                keyProperty.SetValueExt(obj, section.SectionName);
+                keyProperty.SetValue(obj, Parser.Parse(keyProperty.PropertyType, section.SectionName));
             }
             return obj;
         }
