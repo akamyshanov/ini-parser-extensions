@@ -41,9 +41,29 @@ namespace IniParser.Extensions
             foreach (var propertyInfo in type.GetProperties())
             {
                 var keyInfo = propertyInfo.GetKeyInfo();
-                if (keyInfo != null)
+                if (keyInfo == null) continue;
+
+                if (propertyInfo.GetValue(obj) != null)
                 {
-                    keyData[keyInfo.Name] = (propertyInfo.GetValue(obj) ?? "").ToString();
+                    if (propertyInfo.GetValue(obj).GetType().IsArray)
+                    {
+                        var array = (Array)propertyInfo.GetValue(obj);
+                        var builder = new StringBuilder();
+                        foreach (var item in array)
+                        {
+                            builder.Append(item);
+                            builder.Append(", ");
+                        }
+                        keyData[keyInfo.Name] = builder.ToString();
+                    }
+                    else
+                    {
+                        keyData[keyInfo.Name] = propertyInfo.GetValue(obj).ToString();
+                    }
+                }
+                else
+                {
+                    keyData[keyInfo.Name] = "";
                 }
             }
 
